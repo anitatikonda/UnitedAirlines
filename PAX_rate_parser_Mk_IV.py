@@ -91,12 +91,12 @@ for flights in pax_time_master_list:
 			initial_min = 0
 		for timestamp in flights:
 			if int(timestamp[-5:-3]) == initial_min:
-				if int(timestamp[-2:]) >= initial_sec: # if the min falls short of the next 'min tier'
-					count += 1
+				if int(timestamp[-2:]) >= initial_sec: # if the min falls short of the current 'min tier'
+					count += 1 # count it towards current min
 					data = (i, count)
 			elif int(timestamp[-5:-3]) - initial_min == 1:
-				if int(timestamp[-2:]) < initial_sec: # if the min falls into the next 'min tier'
-					count += 1
+				if int(timestamp[-2:]) < initial_sec: # if the min falls short the next 'min tier'
+					count += 1 # count it towards current min
 					data = (i, count)
 		
 		initial_min += 1 # keep unity between boarding minutes (recorded and 1-45)
