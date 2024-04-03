@@ -10,7 +10,7 @@
 
 This repository contains work from my Industrial Engineering Internship under United Airlines. There are 2 projects I contributed to during the internship: Project 1 is an airline boarding rate optimization project \[4 months\], and Project 2 is a technical-operations parts delivery system optimization project \[1 month\]. For more information, see below.
 
-[Click to view Project 1](https://github.com/anitatikonda/pages/anitatikonda/UnitedAirlines/Project1)
+[Click to view Project 1](https://github.com/anitatikonda/UnitedAirlines/Project1)
 
 [Click to view Project 2](https://github.gatech.edu/pages/ltang82/CS4641_Team47/Midterm)
 
