@@ -14,6 +14,6 @@ This repository contains work from my Industrial Engineering Internship under Un
 
 [Click to view Project 2](https://github.gatech.edu/pages/ltang82/CS4641_Team47/Midterm)
 
-**Github Page Status:** Currently Editing \n
+**Github Page Status:** Currently Editing
 
-**Last Time of Edit:** <span style="color:teal"> 10:27 AM EST, Wed Apr 3, 2024 </span>
+**Last Time of Edit:** <span style="color:teal"> 11:05 AM EST, Wed Apr 3, 2024 </span>
