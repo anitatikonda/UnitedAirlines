@@ -2,7 +2,7 @@
 
 **Name:** Anirudh Tatikonda
 
-**Company:
+**Company:** United Airlines
 
 **Date:** January 17, 2023 to June 16, 2023
 
@@ -16,4 +16,4 @@ This repository contains work from my Industrial Engineering Internship under Un
 
 **Github Page Status:** Currently Editing
 
-**Last Time of Edit:** <span style="color:teal"> 11:05 AM EST, Wed Apr 3, 2024 </span>
+**Last Time of Edit:** <span style="color:teal"> 11:06 AM EST, Wed Apr 3, 2024 </span>
