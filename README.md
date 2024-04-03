@@ -8,7 +8,7 @@
 
 **Location:** 233 S Wacker Dr, Chicago, IL 60606
 
-This repository contains work from my Industrial Engineering Internship under United Airlines. There are 2 projects that I completed during the duration of the internship: Project 1 is an airline boarding rate optimization project \[4 months\], and Project 2 is a technical-operations parts delivery system optimization project \[1 month\]. For more information, see below.
+This repository contains work from my Industrial Engineering Internship under United Airlines. There are 2 projects I contributed to during the internship: Project 1 is an airline boarding rate optimization project \[4 months\], and Project 2 is a technical-operations parts delivery system optimization project \[1 month\]. For more information, see below.
 
 [Click to view Project 1](https://github.com/anitatikonda/pages/ltang82/CS4641_Team47/Proposal)
 
