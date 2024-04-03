@@ -1,9 +1,13 @@
 # anitatikonda: United Airlines 2023 Internship
 
 **Name:** Anirudh Tatikonda
+
 **Date:** January 17, 2023 to June 16, 2023
+
 **Location:** 233 S Wacker Dr, Chicago, IL 60606
+
 **Github Page Status:** Currently Editing
+
 **Last Time of Edit:** <span style="color:teal"> 10:27 AM EST, Wed Apr 3, 2024 </span>
 
 [Click to view Proposal](https://github.com/anitatikonda/pages/ltang82/CS4641_Team47/Proposal)
