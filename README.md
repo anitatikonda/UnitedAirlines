@@ -16,4 +16,4 @@ This repository contains work from my Industrial Engineering Internship under Un
 
 **Github Page Status:** Currently Editing
 
-**Last Time of Edit:** ![#0000ff](11:08 AM EST, Wed Apr 3, 2024)
+**Last Time of Edit:** [11:13 AM EST, Wed Apr 3, 2024](<span style="color:teal">11:06 AM EST, Wed Apr 3, 2024</span>)
