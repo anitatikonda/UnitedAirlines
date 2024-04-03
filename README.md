@@ -2,6 +2,8 @@
 
 **Name:** Anirudh Tatikonda
 
+**Company:
+
 **Date:** January 17, 2023 to June 16, 2023
 
 **Location:** 233 S Wacker Dr, Chicago, IL 60606
@@ -12,6 +14,6 @@ This repository contains work from my Industrial Engineering Internship under Un
 
 [Click to view Project 2](https://github.gatech.edu/pages/ltang82/CS4641_Team47/Midterm)
 
-**Github Page Status:** Currently Editing
+**Github Page Status:** Currently Editing \n
 
 **Last Time of Edit:** <span style="color:teal"> 10:27 AM EST, Wed Apr 3, 2024 </span>
