@@ -1,24 +1,23 @@
+# parser credit: @anitatikonda
+# passenger rate parser converter
+# jet bridge to aircraft entry passenger flow measurement & (control v. pilot) analysis
+# used for United Airlines WILMA Group 6 Testing at LAX
 
-# Parser Credit: @ani-tatikonda
-
-# PAX Rate Parser for JB to aircraft entry (Mark IV)
-# Used for UA LAX Group 6 Testing (Control vs. Pilot) Analysis
-
-## initializations (imports and local copy)
+# import statements
 import pandas as pd
 import numpy as np
 from datetime import datetime
 
-# import data file (from Power Apps, saved as CSV file)
+# import data
 data = pd.read_csv('Boarding Rate Observation (10).csv')
 boardrate_df = data.copy() # local copy
 print(len(boardrate_df.index))
 
-# optional start date and end date filters
+# start and end date setting
 start_date = '2/16/2023'
 end_date = '3/21/2023'
 
-# conditions to filter incoming data
+# data filter function
 def parser_filter(dropped_rows_count = 0, test_incentive = 'Group 6 test', pax_greater_than = 0, station = 'MSP'):
 	num_list = []
 	for i in range(0, dropped_rows_count):
@@ -31,22 +30,18 @@ def parser_filter(dropped_rows_count = 0, test_incentive = 'Group 6 test', pax_g
 	print(len(brate_filtered_df.index))
 	brate_filtered_df = brate_filtered_df[brate_filtered_df['Num_PAX'] > pax_greater_than]
 	print(len(brate_filtered_df.index))
-	#brate_filtered_df = brate_filtered_df.query('Date >= @start_date and Date <= @end_date')
 	return brate_filtered_df
 
-# call to above function
 brate_filtered_df = parser_filter(0, 'Control test', 0, 'LAX')
 print(len(brate_filtered_df.index))
 
-# --------------------------------------------------
-
-# takes only pax timestamps from dataframe
+# returns pax timestamps from dataframe
 pax_rate_time = brate_filtered_df['PAX_Timestamps']
 
-# lists
-pax_rate_time_list = [] # to deal with 'REMOVE's
-pax_time_master_list = [] # takes out 'AM' and 'PM'
-pax_timeline_list = [] # builds the (unordered) pax timeline
+# initialize lists
+pax_rate_time_list = [] # deals with removing REMOVE's
+pax_time_master_list = [] # deals with removing 'AM' and 'PM'
+pax_timeline_list = [] # deals with the unordered pax timeline
 
 # parses list and removes instances of '-REMOVE' in each flight entry
 for index, values in pax_rate_time.items():
@@ -56,8 +51,7 @@ for index, values in pax_rate_time.items():
 			temp_list.remove(j)
 	pax_rate_time_list.append(temp_list) # list of lists of pax timestamps
 
-
-# takes out 'AM' and 'PM' (doesn't eliminate)
+# takes out 'AM' and 'PM'
 for item in pax_rate_time_list:
 	list_holder = []
 	count = 1
@@ -66,11 +60,8 @@ for item in pax_rate_time_list:
 		inew = inew.replace(' ', '') # replaces spaces with empty space
 		list_holder.append(inew[:])
 	pax_time_master_list.append(list_holder)
-#print(pax_time_master_list)
-
 
 # Mark IV parsing method
-
 rate_list_by_flight = [] # will contain all data needed for rate-by-min for all flights
 
 # parses through each flight's list of timestamps
@@ -104,18 +95,14 @@ for flights in pax_time_master_list:
 	rate_list_by_flight.append(flight_rate) # adds to flight list
 
 pax_timeline_list = rate_list_by_flight # becomes master flight list
+# pax timestamps have been calculated at this point
 
-# --------------------------------------------------
-
-# rest of below is data manipulation, pax timestamps have been calculated at this point
-
-# initialization of dataframe list for all mins 01-45; empty declarations help
+# initialization of dataframe list for all mins 01-45
 pax_df_list = [[0],[0],[0],[0],[0],[0],[0],[0],[0],[0],[0],[0],[0],[0],[0],[0],[0],[0]\
 ,[0],[0],[0],[0],[0],[0],[0],[0],[0],[0],[0],[0],[0],[0],[0],[0],[0],[0],[0],[0],[0],[0]\
 ,[0],[0],[0],[0],[0]]
 
-
-# construction of dataframe for analysis (first 45 min of pax boarding)
+# construction of dataframe for analysis (first 45 min of pax boarding is desired for analysis)
 for flight in pax_timeline_list:
 	for i in range(1, 46):
 		value = 0
@@ -131,4 +118,3 @@ print(pax_timeline_final)
 
 # export to csv
 pax_timeline_final.to_csv('PAX_Scan_Rate_Timeline_LAX_Ctrl.csv')
-
